@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <title>Sentence Checker</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -16,24 +16,17 @@
   <main class="container-fluid">
 
     <h1>JavaScript for interactive apps!</h1>
-    <h2>Multiplication of three Numbers</h2>
     <h3>Right-click / Inspect, then select console</h3>
 
     <p>Enter your name:
       <input id="Name" type="text" value="Nandini">
     </p>
 
-    <p>Enter first number to multiply:
-      <input id="first" type="number" value="10">
+    <p>Enter Description:
+      <input id="Sentencee" type="text" value=" Hello nandini">
     </p>
 
-    <p>Enter second number to multiply :
-      <input id="second" type="number" value="10">
-    </p>
-    <p>Enter third number to multiply :
-      <input id="third" type="number" value="9">
-    </p>
-
+ 
     <button id="clicker" class="btn btn-primary">Click me!</button>
 
     <p id="result"></p>
@@ -45,22 +38,17 @@
 
     console.log('Declare testable functions.....................')
 
-    function multiply(x, y,z) {
-      return x * y*z
+    function myFunction(sentence) {
+      return (40-(sentence.length))
     }
-    console.log('Defined Multiply=' +multiply )
+  
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
       const i = document.getElementById('Name').value
-      const j = parseInt(document.getElementById('first').value)
-      console.log('j=' + j)
-      const k = parseInt(document.getElementById('second').value)
-      console.log('k=' + k)
-      const l = parseInt(document.getElementById('third').value)
-      console.log('k=' + l)
-      const res = i+ ', your result is ' + multiply(j, k,l) + '.'
+      const j = document.getElementById('sentencee').value
+      const res = i+ ', your description is ' + myFunction(j) + '.'
       document.getElementById('result').innerHTML = res
     })
 
