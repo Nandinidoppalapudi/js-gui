@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Sentence Checker</title>
+  <title>Area Calculator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -10,26 +10,37 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
   <main class="container-fluid">
-
+  
+   
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
+  
+
+      <section>
     <p>Enter your name:
-      <input id="Name" type="text" value="Nandini">
+      <input id="base" type="number" value="6">
     </p>
 
+    
+  
     <p>Enter Description:
-      <input id="sentencee" type="text" value=" Hello nandini">
+      <input id="height" type="number" value="10">
     </p>
 
  
     <button id="clicker" class="btn btn-primary">Click me!</button>
 
+
     <p id="result"></p>
+
+    </section>
 
   </main>
 
@@ -38,17 +49,17 @@
 
     console.log('Declare testable functions.....................')
 
-    function myFunction(sentence) {
-      return (40-(sentence.length))
+    function AreaOfRectangle(base,height) {
+      return base*height;
     }
   
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const i = document.getElementById('Name').value
-      const j = document.getElementById('sentencee').value
-      const res = i+ ', your description is ' + myFunction(j) + '.'
+      const i = document.getElementById('base').value
+      const j = document.getElementById('height').value
+      const res =  ' Area of the Rectangle is ' + AreaOfRectangle(i,j) + '.'
       document.getElementById('result').innerHTML = res
     })
 
