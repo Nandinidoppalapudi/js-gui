@@ -57,8 +57,8 @@
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const i = document.getElementById('base').value
-      const j = document.getElementById('height').value
+      const i = parseInt(document.getElementById('base').value)
+      const j = parseInt(document.getElementById('height').value)
       const res =  ' Area of the Rectangle is ' + AreaOfRectangle(i,j) + '.'
       document.getElementById('result').innerHTML = res
     })
